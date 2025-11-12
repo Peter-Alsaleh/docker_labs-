@@ -1,0 +1,32 @@
+services:
+  web-apache:
+    image: httpd:latest
+    ports:
+      - "90:80"
+    volumes:
+      - ./public-html:/usr/local/apache2/htdocs
+    networks:
+      - web-network
+  db:
+    image: mysql:latest
+    environment:
+      MYSQL_DB: exampledb
+      MYSQL_ROOT_PASSWORD: example
+    volumes:
+      - db-data:/var/lib/mysql
+
+
+  
+
+
+
+volumes:
+  db-data:
+
+
+
+
+networks:
+  web-network:
+
+
