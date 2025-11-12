@@ -1,0 +1,16 @@
+services:
+  db:
+    image: mysql
+    volumes:
+      - db_data:/var/lib/myssql
+    restart: always
+    environment:
+      MYSQL_DB: exampledb
+      MYSQL_ROOT_PASSWORD: example
+
+
+volumes:
+  db_data:
+
+
+
